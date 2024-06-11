@@ -1,15 +1,102 @@
+:root{
+    --header-height:3.5;
+    --hue:230;
+    --first-color:hsl(var(-hue),55%,55%);
+    --first-color-alt: hsl(var(--hue), 50%, 50%);
+    --title-color: hsl(var(-hue), 30%, 95%);
+    --text-color: hsl(var(--hue),20%, 80%);
+    --text-color-Light: hsl(var(--hue), 20%,70%);
+    --body-color: hsl(var(—-hue), 40%, 16%);
+    --container-color: hsl(var(--hue), 40%, 20%);
+
+    /*==============Font and typopraphy ==============*/
+    /*.5rem = 8px /  1rem = 16px*/
+    --body-font: "Syne", sans-serif;
+    --biggest-font-size: 3rem;
+    --big-font-size: 1.5rem;
+    --h1-font-siza: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size:.813rem;
+    /*================ Font weight ===========================*/
+    --Font-regular: 400;
+    --Font-semi-bold: 600;
+    --fort-bold: 700;
+    --font-bold:600;
+
+    /*================ z index ===========================*/
+    --z-tooltip: 10;
+    --z-fixed:100;
+    }
+    /*====================Responsive  typography ================*/
+    @media screen and (min-width:1150px) {
+        :root{
+            --biggest-font-size:5.5rem;
+            --big-font-size:2.25rem;
+            --h1-font-size:2,75rem;
+            --h3-font-size:1.5rem;
+            --normal-size:1.25rem;
+            --normal-font-size:1.125rem;
+            --small-font-size:.875;
+        }
+        
+    }
+    /*============================BASE=============================*/
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    body,
+    input,
+    textarea,
+    button{
+        font-family: var(--body-font);
+        font-size:var(--normal--font-size);
+    }
+
+
+
+
+
+/* body{
+    background-color: darkslategray;
+} */
 .header{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: beige;
-    z-index: var(--z-fixed);
+    background-color:transparent;
+    z-index:blue;
 }
-.nav{
+.nav-container{
     position: relative;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
-    background-color: red;
+    align-items: center;
+}
+.nav_logo{
+    color:white;
+    font-weight:700;
+}
+.nav_toogle,
+.nav_close{
+     font-size: 1.5rem;
+     color: white;
+     cursor: pointer;
+}
+@media screen and(max-width: 1150px) {
+    .nav_menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: hs;
+    }
+
 }
