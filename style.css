@@ -14,7 +14,7 @@
     --body-font: "Syne", sans-serif;
     --biggest-font-size: 3rem;
     --big-font-size: 1.5rem;
-    --h1-font-siza: 1.5rem;
+    --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: .938rem;
@@ -59,7 +59,54 @@
         font-size:var(--normal--font-size);
     }
 
+    input,
+    button,
+    textarea{
+        border: none;
+        outline: none;
+    }
 
+
+    h1,h2,h3{
+        color: var(--title-color);
+        font-weight:var(--font-semi-bold);
+    }
+    p{
+        line-height: 130%;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    /*====================REUSABLE CSS CLAS=====================*/
+
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.section{
+    padding-block: 5rem 2rem;
+}
+.section_title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: 2rem;
+}
+.main{
+    overflow: hidden;
+}
 
 
 
