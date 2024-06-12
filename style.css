@@ -375,6 +375,9 @@
 .about_description{
     margin-bottom: 2rem;
 }
+.about_description b{
+    color: var(--first-color-light);
+}
 .about_img{
     width: 250px;
     justify-self: center;
@@ -382,6 +385,22 @@
                 hsla(var(--hue),40% ,16%) 60%,
                 transparent 100%);
                
+}
+/* button of the CV*/
+.button{
+    display: inline-flex;
+    justify-content: center;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1.25rem 2rem;
+    transition:background-color .4s;
+}
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+.about_button{
+    width: 100%;
 }
 
 /* EXPERIENCE */
