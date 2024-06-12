@@ -1,7 +1,7 @@
 :root{
     --header-height:3.5;
     --hue:230;
-    --first-color:hsl(var(-hue),55%,55%);
+    --first-color-light:hsl(var(--hue),55%,55%);
     --first-color-alt: hsl(var(--hue), 50%, 50%);
     --title-color: hsl(var(-hue), 30%, 95%);
     --text-color: hsl(var(--hue),20%, 80%);
@@ -108,42 +108,81 @@
     overflow: hidden;
 }
 
-
-
-/* body{
-    background-color: darkslategray;
-} */
+/*==================Header==============*/
 .header{
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background-color:transparent;
-    z-index:blue;
+    background-color: transparent;
+    z-index: var(--z-fixed);
 }
 .nav-container{
     position: relative;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
+
 }
 .nav_logo{
-    color:white;
-    font-weight:700;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    
 }
-.nav_toogle,
-.nav_close{
-     font-size: 1.5rem;
-     color: white;
-     cursor: pointer;
+.nav-toggle,
+.nav-close{
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
 }
-@media screen and(max-width: 1150px) {
-    .nav_menu{
+/*===Navigateur for mobile devices=======*/
+@media screen and (max-width:1150px){
+    .nav-menu{
         position: fixed;
         top: 0;
-        right: 0;
-        background-color: hs;
+        right: -100%;
+        background-color: hsla(var(--hue),70%, 4%, .2);
+        backdrop-filter: blur(16px);
+        width: 80%;
+        height: 100%;
+        padding: 7rem;
+        transition: right .4s;
     }
-
+}
+.nav_list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+.nav_link{
+    position: relative;
+    color: var(--title-color);
+    font-weight: var(--Font-semi-bold);
+    transition: color .4s;
+}
+.nav_link::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--first-color-light);
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: width .3s;
+   
+}.nav_link:hover{
+    color: var(--first-color-light);
+}
+.nav_link:hover::after{
+    width: 30%;
+}
+.nav-close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+/*nav menu*/
+.show-menu{
+    right: 0;
 }
