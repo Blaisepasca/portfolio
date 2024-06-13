@@ -404,6 +404,26 @@
 }
 
 /* EXPERIENCE */
+.experience_content{
+    row-gap: 2rem;
+}
+.experience_data{
+    row-gap: 1rem;
+}
+.experience_company{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-bold);
+}
+.experience_profession{
+    font-size: var(--h3-font-size);
+    margin-bottom: .25rem;
+}
+.experience_data{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .75rem;
+}
+
 
 
 /* SKILLS */
