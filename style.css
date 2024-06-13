@@ -439,9 +439,32 @@
     justify-content: space-around;
     align-items: flex-end;
 }
+.skills_box{
+    display: grid;
+    place-items:center;
+    transition: transform .4s;
+}
+.kills_box:hover{
+    transform: translateY(-.25rem);
+}
 
 /*=============== SERVICES ===============*/
-
+.services{
+    background-color: var(--container-color);
+}
+.services_container{
+    row-gap:2rem;
+}
+.services_icon{
+    display: block;
+    color: var(--first-color-light);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.services_title{
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+}
 
 /*=============== CONTACT ===============*/
 
