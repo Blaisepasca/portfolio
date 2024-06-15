@@ -234,7 +234,7 @@
 .home_container{
     row-gap: 2rem;
     padding-top:1rem ;
-    
+    display: flex;
 
 }
 .home_img{
@@ -249,7 +249,7 @@
     font-weight: var(--font-bold);
     word-break: break-word;
     margin-bottom: 1rem;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 .home_profession{
     position: relative;
@@ -692,8 +692,10 @@
     }
 
     .home_container{
-        grid-template-columns: 375px 350px;
-        gap: 3rem 16rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 10;
     }
     .home_img{
         width: 350px;
