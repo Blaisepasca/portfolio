@@ -216,6 +216,9 @@
 .show-menu{
     right: 0;
 }
+.nav_logo{
+    margin-left: 20px;
+}
 /*Add blur header*/
 .blur-header::after{
     content: '';
@@ -243,6 +246,7 @@
     mask-image: linear-gradient(to bottom,
                 hsla(var(--hue),40%,16%)60%,
                 transparent 100%);
+    
 }
 .home_name{
     font-size: var(--biggest-font-size);
@@ -290,6 +294,7 @@
 }
 .home_scroll-text{
     font-weight: var(--font-semi-bold);
+    
     
 }
 .home_scroll-box i{
@@ -513,6 +518,7 @@
 .contact_social-link span{
     font-size: var(--small-font-size);
     font-weight: var(--Font-semi-bold);
+    
 }
 .contact_social-link:hover{
     color: var(--first-color-light);
